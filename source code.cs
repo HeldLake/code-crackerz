@@ -76,9 +76,9 @@ public class Program
 			Correct = true;
 			Console.WriteLine("succes!!! (" + randomNumber + ")" );
 		}
-			//else{
-			//Console.WriteLine("wrong");
-			//}
+			else if(input != randomNumber){
+			Console.WriteLine("wrong");
+			}
 		}
 		Console.WriteLine("play again y/n");
 		string input2 = Console.ReadLine();
@@ -115,7 +115,7 @@ public class Program
 		Console.WriteLine("succes!!! (" + randomNumber + ")" );
 			Correct = true;
 		}
-			else{
+			else if(input != randomNumber){
 			Console.WriteLine("wrong");
 			}
 		}
@@ -154,7 +154,7 @@ public class Program
 		Console.WriteLine("succes!!! (" + randomNumber + ")" );
 			Correct = true;
 		}
-			else{
+			else if(input != randomNumber){
 			Console.WriteLine("wrong");
 			}
 		}
@@ -200,7 +200,7 @@ public class Program
 		Console.WriteLine("succes!!! (" + randomNumber + ")" );
 			Correct = true;
 		}
-			else{
+			else if(input != randomNumber){
 			Console.WriteLine("wrong");
 			}
 		}
