@@ -63,23 +63,46 @@ public class Program
 	string no ="n";
 	string yess ="Y";
 	string noo ="N";
-		bool Correct = false;
-		Random conum = new Random();
-		int randomNumber = conum.Next(1, 10);
 		
-		Console.Write("guess the number between 1 and 10: ");
+		int total = 1,
+            low = 0,
+            high = 0;
+        int ranNum1,
+            guess;
+
+        string guessStr;
+
+        Random ranNumGen = new Random();
+        ranNum1 = ranNumGen.Next(1, 10);
+
+        Console.Write("guess the number between 1 and 10: ");
+        guessStr = Console.ReadLine();
+        guess = Convert.ToInt16(guessStr);
+
+        while (guess != ranNum1 )
+        {
+            while (guess < ranNum1)
+            {
+                Console.WriteLine("Your guess is to low, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++low;
+            }
+            while (guess > ranNum1)
+            {
+                Console.WriteLine("Your guess is to high, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++high;
+            }
+        }
+        //total = low + high;
+        Console.WriteLine("It took you {0} guesses to correctly guess {1}", total, ranNum1);
 		
-		while(!Correct)
-		{
-		int input = Convert.ToInt32(Console.ReadLine());
-			if(input == randomNumber){
-			Correct = true;
-			Console.WriteLine("succes!!! (" + randomNumber + ")" );
-		}
-			else if(input != randomNumber){
-			Console.WriteLine("wrong");
-			}
-		}
 		Console.WriteLine("play again y/n");
 		string input2 = Console.ReadLine();
 	if(input2 == yes){
@@ -102,23 +125,46 @@ public class Program
 	string no ="n";
 	string yess ="Y";
 	string noo ="N";
-		bool Correct = false;
-		Random conum = new Random();
-		int randomNumber = conum.Next(1, 25);
 		
-		Console.Write("guess the number between 1 and 25: ");
+		int total = 1,
+            low = 0,
+            high = 0;
+        int ranNum1,
+            guess;
+
+        string guessStr;
+
+        Random ranNumGen = new Random();
+        ranNum1 = ranNumGen.Next(1, 25);
+
+        Console.Write("guess the number between 1 and 10: ");
+        guessStr = Console.ReadLine();
+        guess = Convert.ToInt16(guessStr);
+
+        while (guess != ranNum1 )
+        {
+            while (guess < ranNum1)
+            {
+                Console.WriteLine("Your guess is to low, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++low;
+            }
+            while (guess > ranNum1)
+            {
+                Console.WriteLine("Your guess is to high, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++high;
+            }
+        }
+        //total = low + high;
+        Console.WriteLine("It took you {0} guesses to correctly guess {1}", total, ranNum1);
 		
-		while(!Correct)
-		{
-		int input = Convert.ToInt32(Console.ReadLine());
-			if(input == randomNumber){
-		Console.WriteLine("succes!!! (" + randomNumber + ")" );
-			Correct = true;
-		}
-			else if(input != randomNumber){
-			Console.WriteLine("wrong");
-			}
-		}
 		Console.WriteLine("play again y/n");
 		string input2 = Console.ReadLine();
 	if(input2 == yes){
@@ -141,23 +187,46 @@ public class Program
 	string no ="n";
 	string yess ="Y";
 	string noo ="N";
-		bool Correct = false;
-		Random conum = new Random();
-		int randomNumber = conum.Next(1, 50);
 		
-		Console.Write("guess the number between 1 and 50: ");
-		
-		while(!Correct)
-		{
-		int input = Convert.ToInt32(Console.ReadLine());
-			if(input == randomNumber){
-		Console.WriteLine("succes!!! (" + randomNumber + ")" );
-			Correct = true;
-		}
-			else if(input != randomNumber){
-			Console.WriteLine("wrong");
-			}
-		}
+			int total = 1,
+            low = 0,
+            high = 0;
+        int ranNum1,
+            guess;
+
+        string guessStr;
+
+        Random ranNumGen = new Random();
+        ranNum1 = ranNumGen.Next(1, 50);
+
+        Console.Write("guess the number between 1 and 10: ");
+        guessStr = Console.ReadLine();
+        guess = Convert.ToInt16(guessStr);
+
+        while (guess != ranNum1 )
+        {
+            while (guess < ranNum1)
+            {
+                Console.WriteLine("Your guess is to low, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++low;
+            }
+            while (guess > ranNum1)
+            {
+                Console.WriteLine("Your guess is to high, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++high;
+            }
+        }
+        //total = low + high;
+        Console.WriteLine("It took you {0} guesses to correctly guess {1}", total, ranNum1);
+			
 		Console.WriteLine("play again y/n");
 		string input2 = Console.ReadLine();
 	if(input2 == yes){
@@ -187,23 +256,45 @@ public class Program
 				int numinput2 = Convert.ToInt32(Console.ReadLine());
 		Console.Clear();
 				
-		bool Correct = false;
-		Random conum = new Random();
-		int randomNumber = conum.Next(numinput1, numinput2);
-		
-		Console.WriteLine("guess the number between " + numinput1 + " and " + numinput2);
-		
-		while(!Correct)
-		{
-		int input = Convert.ToInt32(Console.ReadLine());
-			if(input == randomNumber){
-		Console.WriteLine("succes!!! (" + randomNumber + ")" );
-			Correct = true;
-		}
-			else if(input != randomNumber){
-			Console.WriteLine("wrong");
-			}
-		}
+		int total = 1,
+            low = 0,
+            high = 0;
+        int ranNum1,
+            guess;
+
+        string guessStr;
+
+        Random ranNumGen = new Random();
+        ranNum1 = ranNumGen.Next(numinput1, numinput2);
+
+        Console.Write("guess the number between " + numinput1 + " and " + numinput2 + ": ");
+        guessStr = Console.ReadLine();
+        guess = Convert.ToInt16(guessStr);
+
+        while (guess != ranNum1 )
+        {
+            while (guess < ranNum1)
+            {
+                Console.WriteLine("Your guess is to low, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++low;
+            }
+            while (guess > ranNum1)
+            {
+                Console.WriteLine("Your guess is to high, try again.");
+                //Console.Write("\nguess the number between 1 and 10: ");
+                guessStr = Console.ReadLine();
+                guess = Convert.ToInt16(guessStr);
+                ++total;
+                ++high;
+            }
+        }
+        //total = low + high;
+        Console.WriteLine("It took you {0} guesses to correctly guess {1}", total, ranNum1);
+				
 		Console.WriteLine("play again y/n");
 		string input2 = Console.ReadLine();
 	if(input2 == yes){
